@@ -7,11 +7,10 @@
 
 
 
-//still working on it 
-//needs to be improved
+//works
 
 function decodeString(s) {
-    if (s.includes('[')) {
+    while (s.includes('[')) {
         s = s.replace(/\d+\[\w+\]/g, s => {
             let end = s.lastIndexOf(']');
             let start = s.indexOf('[');
